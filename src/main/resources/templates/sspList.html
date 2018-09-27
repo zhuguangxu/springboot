@@ -1,0 +1,173 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>少数派热门文章</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" />
+    <style>
+        .title{
+            font-size: 20px;
+            /*padding-left: 5px;*/
+            color: white;;
+        }
+        .center{
+            font-size:30px;
+            color:white;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        .avatar{
+            width: 50px;
+            height:50px;
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+        .avatar1{
+            width: 50px;
+            height:50px;
+            /*margin-top: 5px;*/
+            float: left;
+        }
+        .bar{
+            background-color: #292525;
+            height:60px;
+            line-height:60px;
+            width:100%;
+            /*position:absolute;*/
+            /*z-index:5;*/
+
+            top:0;
+            text-align:center;
+        }
+
+        .btn{
+            margin-top: 12px;
+            width:80px;
+            border-radius: 15px;
+            color: white;
+            background-color:transparent;
+            border: 1px solid white;
+        }
+        .btn:hover {
+            background-color:white; /* Green */
+            color: black;
+        }
+        .font{
+            margin-left: 20px;
+        }
+        .li{
+            width:130px;
+            text-align: center;
+            color: #292525;
+            font-size: 16px;
+        }
+        .down{
+            margin-top: 20px;
+            margin-left:20px;
+        }
+        .avatar{
+            width:45px;
+            height:45px;
+            float: left;
+        }
+        .font1{
+            /*margin-left: 20px;*/
+        }
+        .font2{
+            /*margin-left: 20px;*/
+            color: lightgray;
+            /*padding-top: 10px;*/
+        }
+        .font-total{
+            margin-left: 70px;
+        }
+        .total{
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .font-big{
+            margin-top: 10px;
+            font-size: 25px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img th:src="@{img/biao.jpg}" class="img-circle avatar">
+                <span class="title">少数派</span>
+            </div>
+            <div class="col-md-7">
+                <span class="center">#热门文章</span>
+            </div>
+            <div class="col-md-3">
+                <img th:src="@{img/write.png}">
+                <h style="color: #292525;">s</h>
+                <img th:src="@{img/search.png}" >
+                <img th:src="@{img/32.jpg}" class="img-circle avatar">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="font">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="li"><a href="#"style="color: #292525;font-size: larger">正版软件</a></li>
+            <li role="presentation" class="li"><a href="#"style="color: #292525;font-size: larger">付费栏目</a></li>
+            <li role="presentation" class="li"><a href="#"style="color: #292525;font-size: larger">Matrix</a></li>
+            <li role="presentation" class="li" ><a href="#"style="color: #292525;font-size: larger">专题广场</a></li>
+            <li role="presentation" class="li"><a href="#"style="color: #292525;font-size: larger">热门文章</a></li>
+            <li role="presentation" class="li"><a href="#"style="color: #292525;font-size: larger">应用推荐</a></li>
+            <li role="presentation" class="li"><a href="#"style="color: #292525;font-size: larger">生活方式</a></li>
+            <li role="presentation" class="li"><a href="#"style="color: #292525;font-size: larger">新玩意</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="down">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div   th:each="ssp:${sspList}" >
+                    <div class="thumbnail" style="height: 300px; ">
+                        <div class="total">
+                            <img th:src="@{${ssp.avatar}}" class="img-circle avatar1">
+                            <div class="font-total">
+                                <p class="font1" th:text="${ssp.writer}"></p>
+                                <p class="font2" th:text="${ssp.time}"></p>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p class="font-big" th:text="${ssp.title}"></p>
+                                    <th scope="row" th:text="${ssp.id}"></th>
+                                    <td><a th:href="@{/ssp/{sspId}(sspId=${ssp.id})}" th:text="${ssp.title}"></a></td>
+                                    <p th:text="${ssp.content}"></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img th:src="@{${ssp.logo}}" style="width: 210px;height: 160px;">
+                                </div>
+                                <div style="margin-left: 590px">
+                                    <img th:src="@{img/love.png}">
+                                    <span class="font2" th:text="${ssp.number1}"></span>
+                                    <img th:src="@{img/number.png}">
+                                    <span class="font2" th:text="${ssp.number2}"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

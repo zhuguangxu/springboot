@@ -1,0 +1,75 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <script type="text/javascript" th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}"></script>
+    <link th:href="@{https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet"/>
+    <meta charset="UTF-8"/>
+    <title>文章详情</title>
+    <style>
+        .logo{
+            width: 600px;
+            height: 260px;
+            margin-left: 300px;
+
+        }
+        .title{
+            font-size: 36px;
+            text-align: center;
+            width: 736px;
+            margin-left: 200px;
+        }
+        .author-line{
+            display: flex;margin-top: 30px;
+        }
+        .writer{
+            margin-top: 30px;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        .content{
+            font-size: 26px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Spring Data JPA练习</h3>
+        <img th:src="@{${sspDeatil.logo}}" class="logo">
+
+        <p th:text="${sspDeatil.title}" class="title"></p>
+        <span th:text="${sspDeatil.time}"class="time"></span>
+
+       <div class="author-line">
+           <img th:src="@{${sspDeatil.avatar}}" class="avatar">
+           <p th:text="${sspDeatil.writer}" class="writer"></p>
+       </div>
+
+        <span th:text="${sspDeatil.content}" class="content"></span>
+        <!--<div class="col-md-2">-->
+        <!--</div>-->
+        <!--<div class="col-md-8">-->
+            <!--<img th:src="@{${sspDeatil.logo}}" class="logo">-->
+
+            <!--<div class="col-md-2">-->
+                <!--<p th:text="${sspDeatil.title}"></p>-->
+                <!--<span th:text="${sspDeatil.time}"class="time"></span>-->
+             <!--</div>-->
+
+
+        <!--<div class="col-md-10">-->
+            <!---->
+        <!--</div>-->
+
+
+        <!--<div class="col-md-4">-->
+            <!--<img th:src="@{${sspDeatil.avatar}}" class="avatar">-->
+            <!--<p> th:text="${sspDeatil.writer}" class="writer"></p>-->
+            <!--<div class="col-md-8"></div>-->
+            <!--<span th:text="${sspDeatil.content}" class="content"></span>-->
+            <!--<div class="col-md-2"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    </div>
+</body>
+</html>

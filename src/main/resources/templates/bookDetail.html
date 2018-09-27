@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="zh-CN">
+<head>
+    <script type="text/javascript" th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}"></script>
+    <link th:href="@{https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet"/>
+    <meta charset="UTF-8"/>
+    <title>书籍详情</title>
+</head>
+<body>
+<div class="container">
+    <h3>Spring Data JPA练习 </h3>
+    <legend>
+        <strong>书籍详情</strong>
+    </legend>
+    <div class="col-md-4">
+        <p th:text="${book.name}"></p>
+        <p th:text="${book.writer}"></p>
+        <p th:text="${book.introduction}"></p>
+    </div>
+</div>
+</body>
+</html>
