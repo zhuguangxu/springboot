@@ -9,21 +9,21 @@ import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/suser")
 public class UserController {
     @Resource
     private UserServices userServices;
 
-    @GetMapping("/all")
-    public List<User> getAll(){
-        return userServices.getAll();
-    }
-
-
-    @GetMapping("/{id}")
-    public User get(@PathVariable Integer id){
-        return userServices.get(id);
-    }
+//    @GetMapping("/all")
+//    public List<User> getAll(){
+//        return userServices.getAll();
+//    }
+//
+//
+//    @GetMapping("/{id}")
+//    public User get(@PathVariable Integer id){
+//        return userServices.get(id);
+//    }
 
 //    @GetMapping("/{id}")
 //    public User delete(@PathVariable Integer id){
