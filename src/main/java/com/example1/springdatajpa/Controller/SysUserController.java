@@ -23,6 +23,7 @@ public class SysUserController {
     }
 
 
+
     @GetMapping(value = "/oneId/{id}")
     public SysUser getOne(@PathVariable("id") Integer id){
         return sysUserServices.findOne(id);
@@ -38,5 +39,4 @@ public class SysUserController {
     public List<SysUser> findOrderByFans(@PathVariable("nickname") String nickname){
         return sysUserServices.findOrderByFans(nickname);
     }
-
 }

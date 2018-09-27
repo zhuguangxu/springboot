@@ -26,14 +26,19 @@ public class SysUserServicesTest {
 
     @Test
     public void findAll() {
+
     }
 
     @Test
     public void findOne() {
+        SysUser sysUser = sysUserServices.findOne(23);
+        System.out.println(sysUser);
     }
 
     @Test
     public void findOneByAccount() {
+        SysUser sysUser = sysUserServices.findOneByAccount("aaa@qq.com");
+        System.out.println(sysUser);
     }
 
     @Test
