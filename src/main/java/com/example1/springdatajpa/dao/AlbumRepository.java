@@ -1,10 +1,8 @@
 package com.example1.springdatajpa.dao;
 
 import com.example1.springdatajpa.entity.Album;
-import com.example1.springdatajpa.entity.SysUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 

@@ -4,9 +4,6 @@ package com.example1.springdatajpa.dao;
 import com.example1.springdatajpa.entity.Topic;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-/**
- * @author jzy
- */
 public interface TopicRepository extends JpaRepository<Topic,Integer> {
 
     /**

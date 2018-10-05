@@ -10,4 +10,6 @@ public interface AlbumService {
      * @return
      */
     List<Album> getHotAlbums();
+
+    Album findOne(Integer id);
 }

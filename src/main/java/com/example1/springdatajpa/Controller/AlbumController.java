@@ -2,10 +2,8 @@ package com.example1.springdatajpa.Controller;
 
 import com.example1.springdatajpa.Services.AlbumService;
 import com.example1.springdatajpa.entity.Album;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example1.springdatajpa.entity.SysUser;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -21,4 +19,10 @@ public class AlbumController {
     public List<Album> getAlbums(){
         return albumService.getHotAlbums();
     }
+
+    @GetMapping(value = "/{id}")
+    public Album getOne(@PathVariable("id") Integer id){
+        return albumService.findOne(id);
+    }
+
 }

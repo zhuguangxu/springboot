@@ -2,9 +2,9 @@ package com.example1.springdatajpa.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 相册类
@@ -23,6 +23,11 @@ public class Album {
     private String albumDescription;
 
     private Integer likes;
+
+    @OneToMany(fetch = FetchType.EAGER , cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "album_id")
+    private List<Photo> photos = new ArrayList<>();
+
 
     public Album(String albumCover, String albumTitle, String albumDescription, Integer likes) {
         this.albumCover = albumCover;

@@ -17,4 +17,11 @@ public class AlbumServiceImpl implements AlbumService {
     public List<Album> getHotAlbums(){
         return albumRepository.findHotAlbums();
     }
+
+    @Override
+    public Album findOne(Integer id) {
+        return albumRepository.findById(id).get();
+    }
+
+
 }
