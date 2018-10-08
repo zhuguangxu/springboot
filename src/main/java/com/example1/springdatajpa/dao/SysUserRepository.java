@@ -8,9 +8,10 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface SysUserRepository extends JpaRepository<SysUser,Integer> {
+public interface SysUserRepository extends JpaRepository<SysUser, Integer> {
     /**
      * 根据账号精确查询
+     *
      * @param account
      * @return
      */
@@ -19,6 +20,7 @@ public interface SysUserRepository extends JpaRepository<SysUser,Integer> {
 
     /**
      * 根据昵称模糊查询
+     *
      * @param nickname
      * @return
      */
@@ -27,11 +29,12 @@ public interface SysUserRepository extends JpaRepository<SysUser,Integer> {
 
     /**
      * 根据昵称模糊查询和粉丝数查询
+     *
      * @param nickname
      * @param fans
      * @return
      */
-    List<SysUser> findByNicknameStartingWithAndFansAfter(String nickname,Integer fans);
+    List<SysUser> findByNicknameStartingWithAndFansAfter(String nickname, Integer fans);
 
 
     List<SysUser> findByPasswordLessThan(Integer length);

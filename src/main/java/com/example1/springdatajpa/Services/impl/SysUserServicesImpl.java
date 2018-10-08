@@ -11,8 +11,9 @@ import java.util.List;
 @Service
 public class SysUserServicesImpl implements SysUserServices {
 
-@Resource
-private SysUserRepository sysUserRepository;
+    @Resource
+    private SysUserRepository sysUserRepository;
+
     @Override
     public SysUser save(SysUser sysUser) {
         return null;

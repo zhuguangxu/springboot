@@ -26,7 +26,7 @@ public class SysUser implements Serializable {
 
     private Integer fans;
 
-    public SysUser(){
+    public SysUser() {
 
     }
 

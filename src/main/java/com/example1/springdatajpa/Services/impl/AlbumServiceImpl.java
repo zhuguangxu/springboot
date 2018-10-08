@@ -14,7 +14,7 @@ public class AlbumServiceImpl implements AlbumService {
     private AlbumRepository albumRepository;
 
     @Override
-    public List<Album> getHotAlbums(){
+    public List<Album> getHotAlbums() {
         return albumRepository.findHotAlbums();
     }
 

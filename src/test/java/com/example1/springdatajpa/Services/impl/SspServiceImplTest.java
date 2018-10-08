@@ -16,6 +16,7 @@ public class SspServiceImplTest {
 
     @Resource
     private SspService sspService;
+
     @Test
     public void save() {
 

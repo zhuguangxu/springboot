@@ -28,7 +28,7 @@ public class BookController {
 
     @GetMapping("/all")
     public String getBookList(ModelMap map) {
-        map.addAttribute("bookList",bookServices.getAll());
+        map.addAttribute("bookList", bookServices.getAll());
         return BOOK_LIST_PATH_NAME;
     }
 
@@ -37,8 +37,8 @@ public class BookController {
      * 处理 "/book/{id}" 的 GET 请求
      */
     @GetMapping(value = "/{id}")
-    public String getBook(@PathVariable Integer id,ModelMap map) {
-       map.addAttribute("book",bookServices.get(id));
+    public String getBook(@PathVariable Integer id, ModelMap map) {
+        map.addAttribute("book", bookServices.get(id));
         return BOOK_DETAIL_PATH_NAME;
     }
 

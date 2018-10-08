@@ -18,25 +18,24 @@ public class SysUserController {
     private SysUserServices sysUserServices;
 
     @GetMapping(value = "/all")
-    public List<SysUser> findAll(){
+    public List<SysUser> findAll() {
         return sysUserServices.findAll();
     }
 
 
-
     @GetMapping(value = "/oneId/{id}")
-    public SysUser getOne(@PathVariable("id") Integer id){
+    public SysUser getOne(@PathVariable("id") Integer id) {
         return sysUserServices.findOne(id);
     }
 
     @GetMapping(value = "/account/{account}")
-    public SysUser getOneByNickname(@PathVariable("account") String account){
+    public SysUser getOneByNickname(@PathVariable("account") String account) {
         return sysUserServices.findOneByAccount(account);
     }
 
 
     @GetMapping(value = "/nickname/{nickname}")
-    public List<SysUser> findOrderByFans(@PathVariable("nickname") String nickname){
+    public List<SysUser> findOrderByFans(@PathVariable("nickname") String nickname) {
         return sysUserServices.findOrderByFans(nickname);
     }
 }

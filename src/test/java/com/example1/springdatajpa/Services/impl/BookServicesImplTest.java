@@ -19,13 +19,14 @@ public class BookServicesImplTest {
 
     @Resource
     private BookServices bookServices;
+
     @Test
     public void save() {
-        String[] names = {"JAVA笔记大全","Android笔记大全","数据结构笔记大全","软件工程笔记大全","CSS笔记大全"};
-        String[] intros = {"java日常学习，可以用于日常复习","日常学习，可以用于日常复习","日常学习，可以用于日常复习","日常学习，可以用于日常复习","日常学习，可以用于日常复习"};
+        String[] names = {"JAVA笔记大全", "Android笔记大全", "数据结构笔记大全", "软件工程笔记大全", "CSS笔记大全"};
+        String[] intros = {"java日常学习，可以用于日常复习", "日常学习，可以用于日常复习", "日常学习，可以用于日常复习", "日常学习，可以用于日常复习", "日常学习，可以用于日常复习"};
         Random random = new Random();
-        for(int i = 0;i<5;i++){
-            Book book  = new Book();
+        for (int i = 0; i < 5; i++) {
+            Book book = new Book();
             book.setName(names[i]);
             book.setWriter(random.nextInt(30));
             book.setIntroduction(intros[i]);

@@ -24,7 +24,7 @@ public class Album {
 
     private Integer likes;
 
-    @OneToMany(fetch = FetchType.EAGER , cascade = CascadeType.REMOVE)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "album_id")
     private List<Photo> photos = new ArrayList<>();
 
@@ -35,8 +35,9 @@ public class Album {
         this.albumDescription = albumDescription;
         this.likes = likes;
     }
+
     public Album() {
 
     }
 
-    }
+}

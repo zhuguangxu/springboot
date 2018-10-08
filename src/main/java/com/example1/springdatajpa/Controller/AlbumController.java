@@ -16,12 +16,12 @@ public class AlbumController {
     private AlbumService albumService;
 
     @GetMapping("/list")
-    public List<Album> getAlbums(){
+    public List<Album> getAlbums() {
         return albumService.getHotAlbums();
     }
 
     @GetMapping(value = "/{id}")
-    public Album getOne(@PathVariable("id") Integer id){
+    public Album getOne(@PathVariable("id") Integer id) {
         return albumService.findOne(id);
     }
 

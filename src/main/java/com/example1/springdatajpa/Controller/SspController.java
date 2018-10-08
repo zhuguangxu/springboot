@@ -22,7 +22,7 @@ public class SspController {
 
     @GetMapping("/all")
     public String getSspList(ModelMap map) {
-        map.addAttribute("sspList",sspService.getAll());
+        map.addAttribute("sspList", sspService.getAll());
         return SSP_LIST_PATH_NAME;
     }
 
@@ -32,7 +32,7 @@ public class SspController {
      */
     @GetMapping(value = "/{id}")
     public String getSsp(@PathVariable Integer id, ModelMap map) {
-        map.addAttribute("sspDeatil",sspService.get(id));
+        map.addAttribute("sspDeatil", sspService.get(id));
         return SSP_DETAIL_PATH_NAME;
     }
 

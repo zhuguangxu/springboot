@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface AlbumRepository extends JpaRepository<Album,Integer> {
+public interface AlbumRepository extends JpaRepository<Album, Integer> {
 
     /**
      * 自定义查询，得到按照相册的喜欢数降序排列

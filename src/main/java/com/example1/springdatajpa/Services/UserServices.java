@@ -14,7 +14,6 @@ public interface UserServices {
     User save(User user);
 
     /**
-     *
      * @return
      */
     List<User> getAll();

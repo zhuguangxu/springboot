@@ -11,7 +11,7 @@ import javax.persistence.Id;
  * 用@Id注解指定主键
  * 用@GeneratedValue注解标注主键的策略，mysql为自增
  * 用@Data 注解
- * */
+ */
 @Entity
 @Data
 public class User {
@@ -20,6 +20,6 @@ public class User {
     @GeneratedValue
     private Integer id;
     private String userName;
-    private  Integer userAdatar;
+    private Integer userAdatar;
 
 }

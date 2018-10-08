@@ -1,4 +1,5 @@
 package com.example1.springdatajpa.entity;
+
 import lombok.Data;
 
 import javax.persistence.*;
@@ -15,7 +16,7 @@ public class Topic {
     private String name;
 
 
-    @OneToMany(fetch = FetchType.EAGER , cascade = CascadeType.REMOVE)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "topic_id")
     private List<Article> articles = new ArrayList<>();
 

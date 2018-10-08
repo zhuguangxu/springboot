@@ -21,7 +21,8 @@ public class Photo {
         this.photoName = photoName;
         this.photoAddress = photoAddress;
     }
-    public Photo(){
+
+    public Photo() {
 
     }
 }

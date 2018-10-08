@@ -21,9 +21,9 @@ public class UserServicesImplTest {
 
     @Test
     public void save() {
-        String[] names = {"aa","bb","cc","dd","ee"};
+        String[] names = {"aa", "bb", "cc", "dd", "ee"};
         Random random = new Random();
-        for(int i = 0;i<5;i++){
+        for (int i = 0; i < 5; i++) {
             User user = new User();
             user.setUserName(names[i]);
             user.setUserAdatar(random.nextInt(30));

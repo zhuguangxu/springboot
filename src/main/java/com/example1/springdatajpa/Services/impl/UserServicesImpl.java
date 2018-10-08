@@ -12,7 +12,8 @@ import java.util.List;
 @Service
 public class UserServicesImpl implements UserServices {
 
-    /**1.用@Services注解标注本类对象为Services层的bean
+    /**
+     * 1.用@Services注解标注本类对象为Services层的bean
      * 2.用@Resource注解标注dao层的bean userServices
      * 3.
      */
@@ -22,7 +23,7 @@ public class UserServicesImpl implements UserServices {
     @Override
     @Transactional
     public User save(User user) {
-        return  userRepository.save(user);
+        return userRepository.save(user);
     }
 
     @Override
@@ -33,7 +34,7 @@ public class UserServicesImpl implements UserServices {
 
     @Override
     public List<User> getAll() {
-       return userRepository.findAll();
+        return userRepository.findAll();
     }
 
     @Override

@@ -19,7 +19,7 @@ public class TopicController {
     private TopicService topicService;
 
     @GetMapping()
-    public Topic getTopicByName(String name){
+    public Topic getTopicByName(String name) {
         return topicService.findByName(name);
     }
 }

@@ -9,6 +9,7 @@ public interface TopicService {
 
     /**
      * 根据话题名查找
+     *
      * @param name
      * @return
      */
